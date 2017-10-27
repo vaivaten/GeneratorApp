@@ -1,0 +1,21 @@
+<h1>Services</h1>
+
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+<div>
+  <% @services.each do |service| %>
+    <div class="content">
+      <p><%= service.title %></p>
+      <p><%= service.description %></p>
+      <p><%= link_to 'Show', service %></p>
+      <p><%= link_to 'Edit', edit_service_path(service) %></p>
+      <p><%= link_to 'Delete', service, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'Create a New Service', new_service_path %>
